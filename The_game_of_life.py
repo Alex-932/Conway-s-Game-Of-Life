@@ -4,7 +4,7 @@ Conway's game of life
 Created on Fri Mar  4 17:28:41 2022
 
 @author: Alex-932
-@Version : 2.0 (20/03/22)
+@version : 2.0 (20/03/22)
 """
 import numpy as np
 import matplotlib.pyplot as plt
