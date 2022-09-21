@@ -19,6 +19,7 @@ arg_parser.add_argument(
     dest = "savepath",
     default = r"Output/",
     required = False,
+    type = str
     help = "Savepath as follow dir1/../dir3/. (Default is Output/)")
 arg_parser.add_argument(
     "--size",
@@ -34,6 +35,7 @@ arg_parser.add_argument(
     "-l",
     dest = "limit",
     default = 100,
+    type = int
     required = False,
     help = "Maximum number of iterations. (Default is 100)")
 arg_parser.add_argument(
@@ -41,6 +43,7 @@ arg_parser.add_argument(
     "-spf",
     dest = "spf",
     default = 5,
+    type = int
     required = False,
     help = "Second per frame. (Default is 5)")
 args = arg_parser.parse_args()
