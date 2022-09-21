@@ -59,6 +59,7 @@ Scaling_factor = max(int(2000/Y), int(2000/X))
 ## Creating the numpy array
 world = np.random.randint(2, size = (Y, X))
 old_world = world.copy()
+very_old_world = world.copy()
 
 def cycle(world):
     """
@@ -86,9 +87,11 @@ while condition and t <= Limit :
     
     next_world = cycle(world)
     
-    if np.equal(world, next_world).all() or np.equal(old_world, next_world).all() :
+    if np.equal(world, next_world).all() or np.equal(old_world, next_world).all()\
+        or np.equal(very_old_world, next_world):
         condition = False
     
+    very_old_world = old_world.copy()
     old_world = world.copy()
     world = next_world.copy()
     
